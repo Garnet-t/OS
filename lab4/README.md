@@ -1,4 +1,6 @@
-запуск lab4 main_linked. ucrt64 gcc -c -fPIC limit_binary.cpp -o limit_binary.o аналагичная команда для taylor_third.cpp 
+запуск lab4:
+для main_linked.cpp  msys2 ucrt64 
+gcc -c -fPIC limit_binary.cpp -o limit_binary.o аналагичная команда для taylor_third.cpp 
 gcc -shared -c -o liblimit_binary.dll limit_binary.o -lstdc++ -lgcc аналогичная команда для taylor_third.cpp
 gcc -o main_linked main_linked.cpp -L. -llimit_binary -ltaylor_third -I/c/Users/79152/cpp4/MyDLL/.vscode -lstdc++ -lgcc 
 ./main_linked.exe
