@@ -1,0 +1,75 @@
+strace 
+
+strace ./parent outa.txt uu.txt
+execve("./parent", ["./parent", "outa.txt", "uu.txt"], 0x7ffc545d4780 /* 25 vars */) = 0
+brk(NULL)                               = 0x56213c215000
+arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe3106cfa0) = -1 EINVAL (Invalid argument)
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd20e646000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=25035, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 25035, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7fd20e63f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0P\237\2\0\0\0\0\0"..., 832) = 832
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+pread64(3, "\4\0\0\0 \0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0"..., 48, 848) = 48
+pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0I\17\357\204\3$\f\221\2039x\324\224\323\236S"..., 68, 896) = 68
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=2220400, ...}, AT_EMPTY_PATH) = 0
+pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+mmap(NULL, 2264656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7fd20e416000
+mprotect(0x7fd20e43e000, 2023424, PROT_NONE) = 0
+mmap(0x7fd20e43e000, 1658880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x28000) = 0x7fd20e43e000
+mmap(0x7fd20e5d3000, 360448, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1bd000) = 0x7fd20e5d3000
+mmap(0x7fd20e62c000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x215000) = 0x7fd20e62c000
+mmap(0x7fd20e632000, 52816, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7fd20e632000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fd20e413000
+arch_prctl(ARCH_SET_FS, 0x7fd20e413740) = 0
+set_tid_address(0x7fd20e413a10)         = 675
+set_robust_list(0x7fd20e413a20, 24)     = 0
+rseq(0x7fd20e4140e0, 0x20, 0, 0x53053053) = 0
+mprotect(0x7fd20e62c000, 16384, PROT_READ) = 0
+mprotect(0x56210b70e000, 4096, PROT_READ) = 0
+mprotect(0x7fd20e680000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0x7fd20e63f000, 25035)           = 0
+pipe2([3, 4], 0)                        = 0
+pipe2([5, 6], 0)                        = 0
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fd20e413a10) = 676
+clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7fd20e413a10) = 677
+close(3)                                = 0
+close(5)                                = 0
+newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+getrandom("\x7b\x24\x6b\x45\x6e\xe6\x0f\x3f", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0x56213c215000
+brk(0x56213c236000)                     = 0x56213c236000
+write(1, "Enter lines of text (Ctrl+D to e"..., 37Enter lines of text (Ctrl+D to end):
+) = 37
+newfstatat(0, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0x1), ...}, AT_EMPTY_PATH) = 0
+read(0, uueue65663
+"uueue65663\n", 1024)           = 11
+write(4, "uueue65663\n", 11)            = 11
+read(0, stytsyst88
+"stytsyst88\n", 1024)           = 11
+write(4, "stytsyst88\n", 11)            = 11
+read(0, sayastya
+"sayastya\n", 1024)             = 9
+write(4, "sayastya\n", 9)               = 9
+read(0, anastasioa
+"anastasioa\n", 1024)           = 11
+write(4, "anastasioa\n", 11)            = 11
+read(0, 9898392kkkk
+"9898392kkkk\n", 1024)          = 12
+write(6, "9898392kkkk\n", 12)           = 12
+read(0, "", 1024)                       = 0
+close(4)                                = 0
+close(6)                                = 0
+
+кодинг, [12.03.2025 11:20]
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=676, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=677, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+wait4(676, NULL, 0, NULL)               = 676
+wait4(677, NULL, 0, NULL)               = 677
+exit_group(0)                           = ?
++++ exited with 0 +++
